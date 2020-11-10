@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.flexicore.converters.JsonConverter;
+import com.flexicore.interfaces.dynamic.FieldInfo;
 import com.flexicore.interfaces.dynamic.IdRefFieldInfo;
 import com.flexicore.interfaces.dynamic.ListFieldInfo;
 import com.flexicore.model.dynamic.ExecutionParametersHolder;
@@ -31,6 +32,7 @@ public class SendMailRequest extends ExecutionParametersHolder {
     @OneToMany(targetEntity = EmailRef.class,mappedBy = "executionParameterHolder")
     private Set<EmailRef> emailRefs=new HashSet<>();
 
+    @FieldInfo(displayName = "from",mandatory = true)
     private String emailFrom;
     @IdRefFieldInfo(refType = SendGridTemplate.class,list = false,mandatory = true)
     private String sendGridTemplateId;
