@@ -4,7 +4,7 @@
 
     <groupId>com.wizzdi</groupId>
     <artifactId>send-grid-model</artifactId>
-    <version>1.0.2-SNAPSHOT</version>
+    <version>1.0.1-SNAPSHOT</version>
     <name>${project.artifactId}</name>
     <description>FlexiCore model plugin , adds SendGrid support</description>
     <url>https://wizzdi.com</url>
@@ -60,13 +60,13 @@
         <dependency>
             <groupId>com.wizzdi</groupId>
             <artifactId>flexicore-api</artifactId>
-            <version>4.0.8</version>
+            <version>4.2.2</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>com.wizzdi</groupId>
             <artifactId>product-model</artifactId>
-            <version>2.0.6</version>
+            <version>2.3.0</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
