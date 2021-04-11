@@ -5,18 +5,9 @@
     <persistence-unit name="primary">
 
 
-        <class>com.flexicore.model.dynamic.ExecutionParametersHolder</class>
-        <class>com.flexicore.sendgrid.model.EmailRef</class>
         <class>com.flexicore.sendgrid.model.SendGridServer</class>
         <class>com.flexicore.sendgrid.model.SendGridTemplate</class>
-        <class>com.flexicore.sendgrid.model.SendMailRequest</class>
-        <class>com.flexicore.sendgrid.model.ExternalTemplateIdRef</class>
-        <class>com.flexicore.sendgrid.model.SendGridServerFiltering</class>
-        <class>com.flexicore.sendgrid.model.SendGridServerIdRef</class>
-        <class>com.flexicore.sendgrid.model.SendGridTemplateFiltering</class>
-        <class>com.flexicore.sendgrid.model.ApiKeyRef</class>
-        <class>com.flexicore.model.FilteringInformationHolder</class>
-        <class>com.flexicore.sendgrid.model.ImportTemplatesRequest</class>
+
 
 
         <exclude-unlisted-classes>true</exclude-unlisted-classes>
