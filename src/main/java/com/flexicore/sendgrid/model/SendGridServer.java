@@ -1,22 +1,21 @@
 package com.flexicore.sendgrid.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.flexicore.iot.ExternalServer;
-import com.flexicore.security.SecurityContext;
+import com.flexicore.model.SecuredBasic;
 
 import javax.persistence.Entity;
 
 @Entity
-public class SendGridServer extends ExternalServer {
+public class SendGridServer extends SecuredBasic {
 
     @JsonIgnore
     private String apiKey;
+    @JsonIgnore
+    private String apiKeySalt;
+
+
 
     public SendGridServer() {
-    }
-
-    public SendGridServer(String name, SecurityContext securityContext) {
-        super(name, securityContext);
     }
 
     @JsonIgnore
@@ -26,6 +25,16 @@ public class SendGridServer extends ExternalServer {
 
     public <T extends SendGridServer> T setApiKey(String apiKey) {
         this.apiKey = apiKey;
+        return (T) this;
+    }
+
+    @JsonIgnore
+    public String getApiKeySalt() {
+        return apiKeySalt;
+    }
+
+    public <T extends SendGridServer> T setApiKeySalt(String apiKeySalt) {
+        this.apiKeySalt = apiKeySalt;
         return (T) this;
     }
 }

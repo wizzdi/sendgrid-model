@@ -4,7 +4,7 @@
 
     <groupId>com.wizzdi</groupId>
     <artifactId>send-grid-model</artifactId>
-    <version>2.0.0-SNAPSHOT</version>
+    <version>3.0.0-SNAPSHOT</version>
     <name>${project.artifactId}</name>
     <description>FlexiCore model plugin , adds SendGrid support</description>
     <url>https://wizzdi.com</url>
@@ -59,14 +59,14 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
-                <version>2.3.0.RELEASE</version>
+                <version>2.5.2</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
             <dependency>
                 <groupId>com.wizzdi</groupId>
                 <artifactId>flexicore-boot-dependencies</artifactId>
-                <version>1.0.5</version>
+                <version>2.1.12</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -75,29 +75,19 @@
     <dependencies>
         <dependency>
             <groupId>com.wizzdi</groupId>
-            <artifactId>flexicore-boot</artifactId>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.wizzdi</groupId>
-            <artifactId>flexicore-boot-starter-data-jpa</artifactId>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.wizzdi</groupId>
-            <artifactId>flexicore-base-model</artifactId>
+            <artifactId>flexicore-security-model</artifactId>
             <scope>provided</scope>
         </dependency>
 
         <dependency>
             <groupId>com.wizzdi</groupId>
-            <artifactId>product-model</artifactId>
-            <version>3.0.0-SNAPSHOT</version>
+            <artifactId>flexicore-boot-starter-data-jpa</artifactId>
             <scope>provided</scope>
         </dependency>
+
         <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-databind</artifactId>
+            <groupId>com.wizzdi</groupId>
+            <artifactId>flexicore-boot-starter-web</artifactId>
             <scope>provided</scope>
         </dependency>
 
@@ -108,6 +98,7 @@
     <build>
         <plugins>
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.1</version>
             </plugin>

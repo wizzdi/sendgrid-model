@@ -1,13 +1,12 @@
 package com.flexicore.sendgrid.model;
 
-import com.flexicore.model.Baseclass;
-import com.flexicore.security.SecurityContext;
+import com.flexicore.model.SecuredBasic;
 
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 
 @Entity
-public class SendGridTemplate extends Baseclass {
+public class SendGridTemplate extends SecuredBasic {
 
     private String externalId;
 
@@ -17,9 +16,6 @@ public class SendGridTemplate extends Baseclass {
     public SendGridTemplate() {
     }
 
-    public SendGridTemplate(String name, SecurityContext securityContext) {
-        super(name, securityContext);
-    }
 
     @ManyToOne(targetEntity = SendGridServer.class)
     public SendGridServer getSendGridServer() {
